@@ -1,3 +1,5 @@
+// Associations, export models that we define separately in models folder
+
 'use strict'
 
 const db = require('./database')

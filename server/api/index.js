@@ -4,10 +4,11 @@ const Candy = require('../db/models/Candy');
 
 const router = require('express').Router();
 
-router.get('/', async (req, res, next) => {
+// starts with api already
+router.get('/candies', async (req, res, next) => {
   try {
-    const candies = await Candy.findAll();
-    res.send(candies);
+    const allCandies = await Candy.findAll();
+    res.json(allCandies);
   } catch (err) {
     next(err);
   }
